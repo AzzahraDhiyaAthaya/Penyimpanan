@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .card-container{
+            display: flex;
+            min-width: 20vw;
+            min-height: 20vh;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+            padding: 1rem 1rem 1rem 1rem;
+            background: #FFF;
+            box-shadow: 3.5776731967926025px 3.5776731967926025px 24.532615661621094px 2.044384717941284px rgba(0, 0, 0, 0.26);
+        }
+
+        .card-inside{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .profile-container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .btn-bar{
+            display: inline-flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+    </style>
+    <title>Rangga's Profile</title>
+</head>
+<body background="#D9D9D9">
+    <div class="card-container">
+        <div class="card-inside">
+            <div class="profile-container">
+                <img src="https://th.bing.com/th/id/R.f9f7f5bd9fe0b5dc86a89d3feb049ea6?rik=JnLNDlUfKxSbdg&riu=http%3a%2f%2f1.bp.blogspot.com%2f-vqpBaf_gaNk%2fUURfYcuagoI%2fAAAAAAAABJk%2fEGwAQIyS51g%2fs1600%2fchibi-images-2013-02.jpg&ehk=tzD4JIhXXC55ZqZ1z75CgsQPVp3Ed25Co49GfALMLT4%3d&risl=&pid=ImgRaw&r=0" alt="Girl in a jacket" style="width:100px;height:100px;">
+                <h2 style="margin-top: 0px; margin-bottom: 0px;">Rangga Permana</h2>
+                <h5 style="color: grey; margin-top: 0px; margin-bottom: 0px;">UI/UX Designer</h5>
+            </div>
+            <p id="fibo" style="color: grey;">Starts the journey as a storyteller and now step into the world of photography and web design. </p>
+            <div class="button-bar">
+                <button onclick="BtnFunc()">Click Me</button>
+                <button onclick="PageFunc()">Fibonacci</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function BtnFunc(){
+        alert("Hello! My Name is Rangga!!");
+    }
+    
+    function PageFunc(){
+        var result;
+        var a = 1;
+        var b = 1;
+        var temp = 0;
+        result = a + ", " + b;
+        for (let i = 0; i < 10; i++) {
+            temp = a + b;
+            result = result + ", " + temp;
+      
+            a = b;
+            b = temp;
+        } 
+        document.getElementById("fibo").innerHTML = result;
+    }
+</script>
+</html>
