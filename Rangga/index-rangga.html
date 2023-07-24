@@ -3,16 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rangga's Page</title>
 </head>
-<body>
-    <p>Test</p>
-    <h1>Initial</h1>
+<body onload="PageFunc()" align="center">
+    <h1>Rangga's Page</h1>
     <button onclick="BtnFunc()">Click Me</button>
+    <p id="fibo">Test</p>
 </body>
 <script>
     function BtnFunc(){
-        alert("Hello! I am an alert box!!");
+        alert("Hello! My Name is Rangga!!");
+    }
+    
+    function PageFunc(){
+        var result;
+        var a = 1;
+        var b = 1;
+        var temp = 0;
+        result = a + ", " + b;
+        for (let i = 0; i < 10; i++) {
+            temp = a + b;
+            result = result + ", " + temp;
+      
+            a = b;
+            b = temp;
+        } 
+        document.getElementById("fibo").innerHTML = result;
     }
 </script>
 </html>
